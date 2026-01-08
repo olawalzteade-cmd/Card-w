@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Bank Nigeria - Gift Card & Crypto Trading Platform</title>
+    <link rel="stylesheet" href="styles.css">
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <nav>
+            <div class="logo">🏦 Global Bank Nigeria</div>
+            <div class="nav-links">
+                <a href="#" class="active" onclick="showPage('home')">Home</a>
+                <a href="#" onclick="showPage('login')">Login</a>
+                <a href="#" onclick="showPage('register')">Register</a>
+                <a href="#" onclick="showPage('dashboard')">Dashboard</a>
+                <a href="#" onclick="showPage('gift-cards')">Gift Cards</a>
+                <a href="#" onclick="showPage('crypto')">Crypto</a>
+                <a href="#" onclick="showPage('admin')">Admin</a>
+            </div>
+        </nav>
+
+        <!-- Home Page -->
+        <div id="home-page" class="main-content page active">
+            <div class="hero">
+                <h1 style="font-size: 48px; margin-bottom: 20px; color: #667eea;">Welcome to Global Bank Nigeria</h1>
+                <p style="font-size: 20px; margin-bottom: 30px; color: #666;">Your Trusted Platform for Gift Cards, Cryptocurrency & Banking Services</p>
+                <div style="margin-bottom: 40px;">
+                    <button class="btn btn-primary" onclick="showPage('register')">Get Started</button>
+                    <button class="btn btn-success" onclick="showPage('login')">Login Now</button>
+                </div>
+            </div>
+
+            <h2 style="margin-bottom: 20px;">Our Services</h2>
+            <div class="dashboard-grid">
+                <div class="stat-card">
+                    <h3>Gift Cards Trading</h3>
+                    <p>Buy and sell various gift cards instantly</p>
+                </div>
+                <div class="stat-card" style="background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);">
+                    <h3>Cryptocurrency</h3>
+                    <p>Trade BTC, ETH, USDT and more</p>
+                </div>
+                <div class="stat-card" style="background: linear-gradient(135deg, #ed8936 0%, #dd6b20 100%);">
+                    <h3>Banking Services</h3>
+                    <p>Fast bank transfers and withdrawals</p>
+                </div>
+                <div class="stat-card" style="background: linear-gradient(135deg, #f56565 0%, #e53e3e 100%);">
+                    <h3>Global Card</h3>
+                    <p>Our exclusive multi-currency card</p>
+                </div>
+            </div>
+
+            <h2 style="margin-bottom: 20px;">Supported Gift Cards</h2>
+            <div class="gift-card-container">
+                <div class="gift-card amazon">
+                    <div class="card-header">
+                        <span class="card-name">Amazon</span>
+                    </div>
+                    <div class="card-amount">$100</div>
+                    <div class="card-details">Valid: Instant</div>
+                    <div class="barcode">||| ||||| ||||</div>
+                </div>
+                <div class="gift-card itunes">
+                    <div class="card-header">
+                        <span class="card-name">iTunes</span>
+                    </div>
+                    <div class="card-amount">$50</div>
+                    <div class="card-details">Valid: Instant</div>
+                    <div class="barcode">||| ||||| ||||</div>
+                </div>
+                <div class="gift-card google">
+                    <div class="card-header">
+                        <span class="card-name">Google Play</span>
+                    </div>
+                    <div class="card-amount">$25</div>
+                    <div class="card-details">Valid: Instant</div>
+                    <div class="barcode">||| ||||| ||||</div>
+                </div>
+                <div class="gift-card apple">
+                    <div class="card-header">
+                        <span class="card-name">Apple Store</span>
+                    </div>
+                    <div class="card-amount">$75</div>
+                    <div class="card-details">Valid: Instant</div>
+                    <div class="barcode">||| ||||| ||||</div>
+                </div>
+            </div>
+
+            <h2 style="margin-bottom: 20px;">Our Partners</h2>
+            <div class="partners">
+                <div class="partner-logo">Paxful</div>
+                <div class="partner-logo">Cardtonic</div>
+                <div class="partner-logo">Prestmit</div>
+                <div class="partner-logo">Raise</div>
+                <div class="partner-logo">Bitrefill</div>
+                <div class="partner-logo">Paystack</div>
+                <div class="partner-logo">Flutterwave</div>
+                <div class="partner-logo">Opay</div>
+            </div>
+        </div>
+
+        <!-- Login Page -->
+        <div id="login-page" class="main-content page" style="display: none;">
+            <div style="max-width: 400px; margin: 0 auto;">
+                <h2 style="text-align: center; margin-bottom: 30px; color: #667eea;">Login to Your Account</h2>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" id="login-email" required placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" id="login-password" required placeholder="Enter your password">
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <a href="#" onclick="showPage('forgot-password')" style="color: #667eea;">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Login</button>
+                </form>
+                <p style="text-align: center; margin-top: 20px;">
+                    Don't have an account? <a href="#" onclick="showPage('register')" style="color: #667eea;">Register</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Register Page -->
+        <div id="register-page" class="main-content page" style="display: none;">
+            <div style="max-width: 600px; margin: 0 auto;">
+                <h2 style="text-align: center; margin-bottom: 30px; color: #667eea;">Create Account</h2>
+                <form id="register-form">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" id="reg-name" required placeholder="Enter your full name">
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" id="reg-email" required placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" id="reg-phone" required placeholder="Enter your phone number">
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" id="reg-password" required placeholder="Create a password">
+                    </div>
+                    <div class="form-group">
+                        <label>Country</label>
+                        <select id="reg-country" required>
+                            <option value="">Select Country</option>
+                            <option value="NG">Nigeria (+234)</option>
+                            <option value="US">United States (+1)</option>
+                            <option value="UK">United Kingdom (+44)</option>
+                            <option value="GH">Ghana (+233)</option>
+                            <option value="KE">Kenya (+254)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>ID Type</label>
+                        <select id="reg-id-type" required>
+                            <option value="">Select ID Type</option>
+                            <option value="passport">International Passport</option>
+                            <option value="national-id">National ID Card</option>
+                            <option value="drivers-license">Driver's License</option>
+                            <option value="voters-card">Voter's Card</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Upload ID Document</label>
+                        <div class="upload-area" onclick="document.getElementById('id-upload').click()">
+                            <p>Click to upload or drag and drop</p>
+                            <p style="font-size: 12px; color: #999;">PNG, JPG up to 5MB</p>
+                            <input type="file" id="id-upload" accept="image/*" style="display: none;">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Upload Passport Photo</label>
+                        <div class="upload-area" onclick="document.getElementById('passport-upload').click()">
+                            <p>Click to upload or drag and drop</p>
+                            <p style="font-size: 12px; color: #999;">PNG, JPG up to 5MB</p>
+                            <input type="file" id="passport-upload" accept="image/*" style="display: none;">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Create Account</button>
+                </form>
+                <p style="text-align: center; margin-top: 20px;">
+                    Already have an account? <a href="#" onclick="showPage('login')" style="color: #667eea;">Login</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Forgot Password Page -->
+        <div id="forgot-password-page" class="main-content page" style="display: none;">
+            <div style="max-width: 400px; margin: 0 auto;">
+                <h2 style="text-align: center; margin-bottom: 30px; color: #667eea;">Reset Password</h2>
+                <form id="forgot-form">
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" id="forgot-email" required placeholder="Enter your email">
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Reset Link</button>
+                </form>
+                <p style="text-align: center; margin-top: 20px;">
+                    <a href="#" onclick="showPage('login')" style="color: #667eea;">Back to Login</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Dashboard Page -->
+        <div id="dashboard-page" class="main-content page" style="display: none;">
+            <div class="tabs">
+                <button class="tab active" onclick="showTab('overview')">Overview</button>
+                <button class="tab" onclick="showTab('wallet')">Wallet</button>
+                <button class="tab" onclick="showTab('transactions')">Transactions</button>
+                <button class="tab" onclick="showTab('send-receive')">Send & Receive</button>
+                <button class="tab" onclick="showTab('support')">Support</button>
+            </div>
+
+            <!-- Overview Tab -->
+            <div id="overview-tab" class="tab-content active">
+                <h2 style="margin-bottom: 20px;">Welcome Back!</h2>
+                <div class="dashboard-grid">
+                    <div class="stat-card">
+                        <h3>Total Balance</h3>
+                        <div class="value">₦1,250,000.00</div>
+                    </div>
+                    <div class="stat-card" style="background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);">
+                        <h3>Credit Balance</h3>
+                        <div class="value">₦850,000.00</div>
+                    </div>
+                    <div class="stat-card" style="background: linear-gradient(135deg, #f56565 0%, #e53e3e 100%);">
+                        <h3>Debit Balance</h3>
+                        <div class="value">₦400,000.00</div>
+                    </div>
+                    <div class="stat-card" style="background: linear-gradient(135deg, #ed8936 0%, #dd6b20 100%);">
+                        <h3>Pending</h3>
+                        <div class="value">₦150,000.00</div>
+                    </div>
+                </div>
+
+                <h3 style="margin-bottom: 20px;">Recent Activity</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Type</th>
+                            <th>Description</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2024-01-15</td>
+                            <td>Credit</td>
+                            <td>Gift Card Sale - Amazon $100</td>
+                            <td>₦75,000.00</td>
+                            <td style="color: #48bb78;">Completed</td>
+                        </tr>
+                        <tr>
+                            <td>2024-01-14</td>
+                            <td>Debit</td>
+                            <td>Bank Transfer Withdrawal</td>
+                            <td>-₦50,000.00</td>
+                            <td style="color: #48bb78;">Completed</td>
+                        </tr>
+                        <tr>
+                            <td>2024-01-13</td>
+                            <td>Credit</td>
+                            <td>Bitcoin Sale</td>
+                            <td>₦125,000.00</td>
+                            <td style="color: #ed8936;">Pending</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Wallet Tab -->
+            <div id="wallet-tab" class="tab-content">
+                <h2 style="margin-bottom: 20px;">My Wallet</h2>
+                <div class="dashboard-grid">
+                    <div class="stat-card">
+                        <h3>Naira Balance</h3>
+                        <div class="value">₦1,250,000.00</div>
+                    </div>
+                    <div class="stat-card" style="background: linear-gradient(135deg, #f7931a 0%, #ffab40 100%);">
+                        <h3>Bitcoin</h3>
+                        <div class="value">0.025 BTC</div>
+                    </div>
+                    <div class="stat-card" style="background: linear-gradient(135deg, #627eea 0%, #2172e5 100%);">
+                        <h3>Ethereum</h3>
+                        <div class="value">0.5 ETH</div>
+                    </div>
+                    <div class="stat-card" style="background: linear-gradient(135deg, #26a17b 0%, #1eb5a0 100%);">
+                        <h3>USDT</h3>
+                        <div class="value">500 USDT</div>
+                    </div>
+                </div>
+
+                <h3 style="margin-bottom: 20px;">Withdraw to Bank</h3>
+                <form class="transaction-form">
+                    <div class="row">
+                        <div class="form-group">
+                            <label>Bank Name</label>
+                            <select required>
+                                <option value="">Select Bank</option>
+                                <option value="access">Access Bank</option>
+                                <option value="gtbank">GTBank</option>
+                                <option value="zenith">Zenith Bank</option>
+                                <option value="uba">UBA</option>
+                                <option value="firstbank">First Bank</option>
+                                <option value="opay">Opay</option>
+                                <option value="palmpay">PalmPay</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Account Number</label>
+                            <input type="text" required placeholder="Enter account number" maxlength="10">
+                        </div>
+                        <div class="form-group">
+                            <label>Account Name</label>
+                            <input type="text" required placeholder="Account name will appear here" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label>Amount (₦)</label>
+                            <input type="number" required placeholder="Enter amount">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-success">Withdraw</button>
+                </form>
+            </div>
+
+            <!-- Transactions Tab -->
+            <div id="transactions-tab" class="tab-content">
+                <h2 style="margin-bottom: 20px;">Transaction History</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Transaction ID</th>
+                            <th>Date</th>
+                            <th>Type</th>
+                            <th>Description</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="transaction-table">
+                        <!-- Transactions will be loaded here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Send & Receive Tab -->
+            <div id="send-receive-tab" class="tab-content">
+                <div class="tabs">
+                    <button class="tab active" onclick="showSendTab('send')">Send Gift Card</button>
+                    <button class="tab" onclick="showSendTab('receive')">Receive Gift Card</button>
+                </div>
+
+                <div id="send-tab" class="tab-content active">
+                    <h2 style="margin-bottom: 20px;">Send Gift Card</h2>
+                    <form class="transaction-form">
+                        <div class="form-group">
+                            <label>Gift Card Type</label>
+                            <select id="send-card-type" required>
+                                <option value="">Select Card Type</option>
+                                <option value="amazon">Amazon</option>
+                                <option value="itunes">iTunes</option>
+                                <option value="google">Google Play</option>
+                                <option value="apple">Apple Store</option>
+                                <option value="global">Global Card</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Card Amount</label>
+                            <select required>
+                                <option value="">Select Amount</option>
+                                <option value="1">$1</option>
+                                <option value="2">$2</option>
+                                <option value="5">$5</option>
+                                <option value="10">$10</option>
+                                <option value="15">$15</option>
+                                <option value="20">$20</option>
+                                <option value="25">$25</option>
+                                <option value="50">$50</option>
+                                <option value="100">$100</option>
+                                <option value="500">$500</option>
+                                <option value="1000">$1000</option>
+                                <option value="10000">$10000</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Recipient Email/Account</label>
+                            <input type="text" required placeholder="Enter recipient email or account number">
+                        </div>
+                        <div class="form-group">
+                            <label>Message (Optional)</label>
+                            <textarea rows="3" placeholder="Add a message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Gift Card</button>
+                    </form>
+                </div>
+
+                <div id="receive-tab" class="tab-content">
+                    <h2 style="margin-bottom: 20px;">Request Gift Card</h2>
+                    <form class="transaction-form">
+                        <div class="form-group">
+                            <label>Gift Card Type</label>
+                            <select required>
+                                <option value="">Select Card Type</option>
+                                <option value="amazon">Amazon</option>
+                                <option value="itunes">iTunes</option>
+                                <option value="google">Google Play</option>
+                                <option value="apple">Apple Store</option>
+                                <option value="global">Global Card</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Requested Amount ($)</label>
+                            <input type="number" required placeholder="Enter amount">
+                        </div>
+                        <div class="form-group">
+                            <label>Upload Card Code/Image</label>
+                            <div class="upload-area" onclick="document.getElementById('card-upload').click()">
+                                <p>Click to upload card code or image</p>
+                                <input type="file" id="card-upload" accept="image/*" style="display: none;">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-success">Submit Request</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Support Tab -->
+            <div id="support-tab" class="tab-content">
+                <h2 style="margin-bottom: 20px;">Support Center</h2>
+                <div class="message-box">
+                    <h3 style="margin-bottom: 15px;">Send a Message</h3>
+                    <form>
+                        <div class="form-group">
+                            <label>Subject</label>
+                            <input type="text" required placeholder="Enter subject">
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea rows="5" required placeholder="Describe your issue"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Attach Screenshot (Optional)</label>
+                            <div class="upload-area" onclick="document.getElementById('support-upload').click()">
+                                <p>Click to upload screenshot</p>
+                                <input type="file" id="support-upload" accept="image/*" style="display: none;">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+
+                <h3 style="margin-bottom: 15px;">Previous Messages</h3>
+                <div id="support-messages">
+                    <div class="message-item">
+                        <div class="header">
+                            <strong>Subject: Gift Card Verification Issue</strong>
+                            <span style="color: #666;">2024-01-15 10:30</span>
+                        </div>
+                        <p>I'm having trouble verifying my Amazon gift card. The system shows it as invalid.</p>
+                        <div class="attachments">
+                            <span class="attachment">screenshot.png</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gift Cards Page -->
+        <div id="gift-cards-page" class="main-content page" style="display: none;">
+            <h2 style="margin-bottom: 20px;">Gift Cards Trading</h2>
+            
+            <div class="tabs">
+                <button class="tab active" onclick="showGiftTab('buy')">Buy Gift Cards</button>
+                <button class="tab" onclick="showGiftTab('sell')">Sell Gift Cards</button>
+                <button class="tab" onclick="showGiftTab('verify')">Verify Card</button>
+                <button class="tab" onclick="showGiftTab('scan')">Scan Barcode</button>
+            </div>
+
+            <!-- Buy Gift Cards -->
+            <div id="buy-tab" class="tab-content active">
+                <h3 style="margin-bottom: 20px;">Available Gift Cards</h3>
+                <div class="gift-card-container" id="available-cards">
+                    <!-- Cards will be loaded dynamically -->
+                </div>
+
+                <h3 style="margin-bottom: 20px;">Purchase Gift Card</h3>
+                <form class="transaction-form">
+                    <div class="row">
+                        <div class="form-group">
+                            <label>Select Card Type</label>
+                            <select required>
+                                <option value="">Select Card</option>
+                                <option value="amazon">Amazon</option>
+                                <option value="itunes">iTunes</option>
+                                <option value="google">Google Play</option>
+                                <option value="apple">Apple Store</option>
+                                <option value="global">Global Card</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Amount ($)</label>
+                            <select required>
+                                <option value="">Select Amount</option>
+                                <option value="1">$1</option>
+                                <option value="5">$5</option>
+                                <option value="10">$10</option>
+                                <option value="25">$25</option>
+                                <option value="50">$50</option>
+                                <option value="100">$100</option>
+                                <option value="500">$500</option>
+                                <option value="1000">$1000</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Quantity</label>
+                            <input type="number" value="1" min="1" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-success">Purchase</button>
+                </form>
+            </div>
+
+            <!-- Sell Gift Cards -->
+            <div id="sell-tab" class="tab-content">
+                <h3 style="margin-bottom: 20px;">Sell Your Gift Card</h3>
+                <form class="transaction-form">
+                    <div class="row">
+                        <div class="form-group">
+                            <label>Card Type</label>
+                            <select required>
+                                <option value="">Select Card Type</option>
+                                <option value="amazon">Amazon</option>
+                                <option value="itunes">iTunes</option>
+                                <option value="google">Google Play</option>
+                                <option value="apple">Apple Store</option>
+                                <option value="steam">Steam</option>
+                                <option value="sephora">Sephora</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Card Amount ($)</label>
+                            <input type="number" required placeholder="Enter card amount">
+                        </div>
+                        <div class="form-group">
+                            <label>Card Code/Number</label>
+                            <input type="text" required placeholder="Enter card code">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Upload Card Image</label>
+                        <div class="upload-area">
+                            <p>Click to upload card image</p>
+                            <input type="file" accept="image/*">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Additional Notes</label>
+                        <textarea rows="3" placeholder="Any additional information"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit for Sale</button>
+                </form>
+            </div>
+
+            <!-- Verify Card -->
+            <div id="verify-tab" class="tab-content">
+                <h3 style="margin-bottom: 20px;">Gift Card Verification</h3>
+                <div class="verification-box">
+                    <div class="form-group">
+                        <label>Enter Card Number/Code</label>
+                        <input type="text" id="verify-card-input" placeholder="Enter card number or code to verify">
+                    </div>
+                    <button class="btn btn-primary" onclick="verifyCard()">Verify Card</button>
+                    
+                    <div id="verification-result" class="verification-result"></div>
+                </div>
+            </div>
+
+            <!-- Scan Barcode -->
+            <div id="scan-tab" class="tab-content">
+                <h3 style="margin-bottom: 20px;">Barcode Scanner</h3>
+                <div class="scanner-container">
+                    <div class="scanner-box">
+                        <div class="scanner-line"></div>
+                    </div>
+                    <p>Position gift card barcode within the frame</p>
+                    <button class="btn btn-primary" onclick="startScan()">Start Scanning</button>
+                    <div id="scan-result" style="margin-top: 20px; display: none;">
+                        <h4>Scan Result:</h4>
+                        <p id="scan-details"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Crypto Page -->
+        <div id="crypto-page" class="main-content page" style="display: none;">
+            <h2 style="margin-bottom: 20px;">Cryptocurrency Trading</h2>
+            
+            <div class="tabs">
+                <button class="tab active" onclick="showCryptoTab('bitcoin')">Bitcoin</button>
+                <button class="tab" onclick="showCryptoTab('ethereum')">Ethereum</button>
+                <button class="tab" onclick="showCryptoTab('bitcoin-cash')">Bitcoin Cash</button>
+                <button class="tab" onclick="showCryptoTab('tron')">Tron</button>
+                <button class="tab" onclick="showCryptoTab('ton')">TON</button>
+                <button class="tab" onclick="showCryptoTab('mining')">Mining</button>
+            </div>
+
+            <!-- Bitcoin Tab -->
+            <div id="bitcoin-tab" class="tab-content active">
+                <div class="dashboard-grid">
+                    <div class="stat-card" style="background: linear-gradient(135deg, #f7931a 0%, #ffab40 100%);">
+                        <h3>Bitcoin Balance</h3>
+                        <div class="value">0.025 BTC</div>
+                        <p style="margin-top: 10px; font-size: 14px;">≈ ₦1,250,000</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Current Price</h3>
+                        <div class="value">₦50,000,000</div>
+                        <p style="margin-top: 10px; font-size: 14px;">per BTC</p>
+                    </div>
+                </div>
+
+                <div class="tabs" style="margin-top: 30px;">
+                    <button class="tab active" onclick="showCryptoAction('buy', 'bitcoin')">Buy</button>
+                    <button class="tab" onclick="showCryptoAction('sell', 'bitcoin')">Sell</button>
+                    <button class="tab" onclick="showCryptoAction('send', 'bitcoin')">Send</button>
+                    <button class="tab" onclick="showCryptoAction('receive', 'bitcoin')">Receive</button>
+                </div>
+
+                <div id="bitcoin-buy-action" class="tab-content active">
+                    <h3 style="margin-bottom: 20px;">Buy Bitcoin</h3>
+                    <form class="transaction-form">
+                        <div class="row">
+                            <div class="form-group">
+                                <label>Amount in NGN</label>
+                                <input type="number" required placeholder="Enter amount">
+                            </div>
+                            <div class="form-group">
+                                <label>You will receive (BTC)</label>
+                                <input type="text" readonly placeholder="0.0000 BTC">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-success">Buy Bitcoin</button>
+                    </form>
+                </div>
+
+                <div id="bitcoin-sell-action" class="tab-content">
+                    <h3 style="margin-bottom: 20px;">Sell Bitcoin</h3>
+                    <form class="transaction-form">
+                        <div class="row">
+                            <div class="form-group">
+                                <label>Amount in BTC</label>
+                                <input type="number" step="0.00000001" required placeholder="Enter amount">
+                            </div>
+                            <div class="form-group">
+                                <label>You will receive (NGN)</label>
+                                <input type="text" readonly placeholder="₦0.00">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Sell Bitcoin</button>
+                    </form>
+                </div>
+
+                <div id="bitcoin-send-action" class="tab-content">
+                    <h3 style="margin-bottom: 20px;">Send Bitcoin</h3>
+                    <form class="transaction-form">
+                        <div class="form-group">
+                            <label>Recipient Wallet Address</label>
+                            <input type="text" required placeholder="Enter BTC wallet address">
+                        </div>
+                        <div class="form-group">
+                            <label>Amount (BTC)</label>
+                            <input type="number" step="0.00000001" required placeholder="Enter amount">
+                        </div>
+                        <div class="form-group">
+                            <label>Network Fee</label>
+                            <input type="text" readonly value="0.0001 BTC">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Bitcoin</button>
+                    </form>
+                </div>
+
+                <div id="bitcoin-receive-action" class="tab-content">
+                    <h3 style="margin-bottom: 20px;">Receive Bitcoin</h3>
+                    <div style="background: #f8f9fa; padding: 30px; border-radius: 15px; text-align: center;">
+                        <p style="margin-bottom: 15px; font-weight: 600;">Your Bitcoin Wallet Address</p>
+                        <div style="background: white; padding: 15px; border-radius: 10px; margin-bottom: 20px; font-family: monospace; word-break: break-all;">
+                            bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh
+                        </div>
+                        <button class="btn btn-primary" onclick="copyAddress('bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh')">Copy Address</button>
+                        <div style="margin-top: 20px; width: 200px; height: 200px; background: white; margin-left: auto; margin-right: auto; display: flex; align-items: center; justify-content: center; border-radius: 10px;">
+                            QR Code
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ethereum Tab -->
+            <div id="ethereum-tab" class="tab-content">
+                <div class="dashboard-grid">
+                    <div class="stat-card" style="background: linear-gradient(135deg, #627eea 0%, #2172e5 100%);">
+                        <h3>Ethereum Balance</h3>
+                        <div class="value">0.5 ETH</div>
+                        <p style="margin-top: 10px; font-size: 14px;">≈ ₦1,500,000</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Current Price</h3>
+                        <div class="value">₦3,000,000</div>
+                        <p style="margin-top: 10px; font-size: 14px;">per ETH</p>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 50px;">Ethereum trading interface - Similar to Bitcoin</p>
+            </div>
+
+            <!-- Bitcoin Cash Tab -->
+            <div id="bitcoin-cash-tab" class="tab-content">
+                <div class="dashboard-grid">
+                    <div class="stat-card" style="background: linear-gradient(135deg, #8dc351 0%, #6b9c38 100%);">
+                        <h3>Bitcoin Cash Balance</h3>
+                        <div class="value">1.2 BCH</div>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 50px;">Bitcoin Cash trading interface</p>
+            </div>
+
+            <!-- Tron Tab -->
+            <div id="tron-tab" class="tab-content">
+                <div class="dashboard-grid">
+                    <div class="stat-card" style="background: linear-gradient(135deg, #ff0013 0%, #cc000f 100%);">
+                        <h3>Tron Balance</h3>
+                        <div class="value">500 TRX</div>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 50px;">Tron trading interface</p>
+            </div>
+
+            <!-- TON Tab -->
+            <div id="ton-tab" class="tab-content">
+                <div class="dashboard-grid">
+                    <div class="stat-card" style="background: linear-gradient(135deg, #0098ea 0%, #0077b8 100%);">
+                        <h3>TON Balance</h3>
+                        <div class="value">100 TON</div>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 50px;">TON trading interface</p>
+            </div>
+
+            <!-- Mining Tab -->
+            <div id="mining-tab" class="tab-content">
+                <h3 style="margin-bottom: 20px;">Crypto Mining</h3>
+                <div class="mining-interface">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                        <h2>Mining Control</h2>
+                        <div>
+                            <button class="btn btn-success" onclick="startMining()">Start Mining</button>
+                            <button class="btn btn-danger" onclick="stopMining()">Stop Mining</button>
+                        </div>
+                    </div>
+
+                    <div class="mining-stats">
+                        <div class="mining-stat">
+                            <h4>Mining Status</h4>
+                            <div class="value" id="mining-status" style="color: #f56565;">Stopped</div>
+                        </div>
+                        <div class="mining-stat">
+                            <h4>Total Mined</h4>
+                            <div class="value">0.0000 BTC</div>
+                        </div>
+                        <div class="mining-stat">
+                            <h4>Hash Rate</h4>
+                            <div class="value">0 H/s</div>
+                        </div>
+                        <div class="mining-stat">
+                            <h4>Network Difficulty</h4>
+                            <div class="value">High</div>
+                        </div>
+                    </div>
+
+                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px;">
+                        <h4 style="margin-bottom: 15px;">Mining Wallet</h4>
+                        <p style="font-family: monospace; word-break: break-all;">bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Admin Page -->
+        <div id="admin-page" class="main-content page" style="display: none;">
+            <div class="admin-panel">
+                <div class="admin-sidebar">
+                    <h3 style="margin-bottom: 20px;">Admin Panel</h3>
+                    <div class="admin-menu-item active" onclick="showAdminSection('dashboard')">Dashboard</div>
+                    <div class="admin-menu-item" onclick="showAdminSection('users')">User Management</div>
+                    <div class="admin-menu-item" onclick="showAdminSection('balance')">Edit Balance</div>
+                    <div class="admin-menu-item" onclick="showAdminSection('transactions')">Transactions</div>
+                    <div class="admin-menu-item" onclick="showAdminSection('gift-cards')">Gift Cards</div>
+                    <div class="admin-menu-item" onclick="showAdminSection('mining')">Mining Control</div>
+                    <div class="admin-menu-item" onclick="showAdminSection('messages')">Messages</div>
+                    <div class="admin-menu-item" onclick="showAdminSection('global-card')">Global Card</div>
+                    <div class="admin-menu-item" onclick="showAdminSection('settings')">Settings</div>
+                </div>
+
+                <div class="admin-content">
+                    <!-- Admin Dashboard -->
+                    <div id="admin-dashboard" class="admin-section active">
+                        <h2 style="margin-bottom: 20px;">Admin Dashboard</h2>
+                        <div class="dashboard-grid">
+                            <div class="stat-card">
+                                <h3>Total Users</h3>
+                                <div class="value">1,234</div>
+                            </div>
+                            <div class="stat-card" style="background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);">
+                                <h3>Total Balance</h3>
+                                <div class="value">₦45,678,900</div>
+                            </div>
+                            <div class="stat-card" style="background: linear-gradient(135deg, #ed8936 0%, #dd6b20 100%);">
+                                <h3>Today's Transactions</h3>
+                                <div class="value">156</div>
+                            </div>
+                            <div class="stat-card" style="background: linear-gradient(135deg, #f56565 0%, #e53e3e 100%);">
+                                <h3>Pending Requests</h3>
+                                <div class="value">23</div>
+                            </div>
+                        </div>
+
+                        <h3 style="margin-bottom: 20px;">Recent Activities</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Time</th>
+                                    <th>User</th>
+                                    <th>Action</th>
+                                    <th>Details</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>10:45 AM</td>
+                                    <td>John Doe</td>
+                                    <td>Gift Card Sale</td>
+                                    <td>Amazon $100</td>
+                                    <td style="color: #ed8936;">Pending</td>
+                                </tr>
+                                <tr>
+                                    <td>10:30 AM</td>
+                                    <td>Jane Smith</td>
+                                    <td>Withdrawal</td>
+                                    <td>₦50,000 to GTBank</td>
+                                    <td style="color: #48bb78;">Approved</td>
+                                </tr>
+                                <tr>
+                                    <td>10:15 AM</td>
+                                    <td>Mike Johnson</td>
+                                    <td>Crypto Purchase</td>
+                                    <td>0.01 BTC</td>
+                                    <td style="color: #48bb78;">Completed</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- User Management -->
+                    <div id="admin-users" class="admin-section" style="display: none;">
+                        <h2 style="margin-bottom: 20px;">User Management</h2>
+                        <div class="form-group" style="margin-bottom: 20px;">
+                            <input type="text" placeholder="Search users..." style="padding: 10px; width: 300px; border: 2px solid #e0e0e0; border-radius: 8px;">
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>User ID</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Balance</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>GBN001</td>
+                                    <td>John Doe</td>
+                                    <td>john@email.com</td>
+                                    <td>₦250,000</td>
+                                    <td style="color: #48bb78;">Active</td>
+                                    <td>
+                                        <button class="btn btn-primary" style="padding: 5px 10px; font-size: 12px;">View</button>
+                                        <button class="btn btn-danger" style="padding: 5px 10px; font-size: 12px;">Freeze</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>GBN002</td>
+                                    <td>Jane Smith</td>
+                                    <td>jane@email.com</td>
+                                    <td>₦180,000</td>
+                                    <td style="color: #48bb78;">Active</td>
+                                    <td>
+                                        <button class="btn btn-primary" style="padding: 5px 10px; font-size: 12px;">View</button>
+                                        <button class="btn btn-danger" style="padding: 5px 10px; font-size: 12px;">Freeze</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Edit Balance -->
+                    <div id="admin-balance" class="admin-section" style="display: none;">
+                        <h2 style="margin-bottom: 20px;">Edit User Balance</h2>
+                        <form class="transaction-form">
+                            <div class="row">
+                                <div class="form-group">
+                                    <label>User Account Number</label>
+                                    <input type="text" id="admin-account-number" placeholder="Enter 1-10 digit account number" maxlength="10" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>User Name</label>
+                                    <input type="text" id="admin-user-name" placeholder="User name will appear here" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label>Current Balance</label>
+                                    <input type="text" id="admin-current-balance" placeholder="Current balance" readonly>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group">
+                                    <label>Action</label>
+                                    <select id="admin-balance-action" required>
+                                        <option value="credit">Credit (Add)</option>
+                                        <option value="debit">Debit (Deduct)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Amount (₦)</label>
+                                    <input type="number" id="admin-balance-amount" required placeholder="Enter amount">
+                                </div>
+                                <div class="form-group">
+                                    <label>Reason</label>
+                                    <input type="text" id="admin-balance-reason" required placeholder="Reason for balance change">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-success">Update Balance</button>
+                        </form>
+                    </div>
+
+                    <!-- Transactions -->
+                    <div id="admin-transactions" class="admin-section" style="display: none;">
+                        <h2 style="margin-bottom: 20px;">Transaction Management</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Transaction ID</th>
+                                    <th>Type</th>
+                                    <th>From</th>
+                                    <th>To</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>TXN001234</td>
+                                    <td>Gift Card</td>
+                                    <td>John Doe</td>
+                                    <td>Admin</td>
+                                    <td>$100</td>
+                                    <td style="color: #ed8936;">Pending</td>
+                                    <td>
+                                        <button class="btn btn-success" style="padding: 5px 10px; font-size: 12px;">Approve</button>
+                                        <button class="btn btn-danger" style="padding: 5px 10px; font-size: 12px;">Reject</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Gift Cards -->
+                    <div id="admin-gift-cards" class="admin-section" style="display: none;">
+                        <h2 style="margin-bottom: 20px;">Gift Card Management</h2>
+                        <div style="margin-bottom: 20px;">
+                            <button class="btn btn-primary" onclick="showModal('add-card')">Add New Card Type</button>
+                            <button class="btn btn-success" onclick="showModal('generate-cards')">Generate Cards</button>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Card Type</th>
+                                    <th>Total Generated</th>
+                                    <th>Available</th>
+                                    <th>Sold</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Amazon</td>
+                                    <td>1,000</td>
+                                    <td>750</td>
+                                    <td>250</td>
+                                    <td style="color: #48bb78;">Active</td>
+                                </tr>
+                                <tr>
+                                    <td>iTunes</td>
+                                    <td>800</td>
+                                    <td>600</td>
+                                    <td>200</td>
+                                    <td style="color: #48bb78;">Active</td>
+                                </tr>
+                                <tr>
+                                    <td>Google Play</td>
+                                    <td>500</td>
+                                    <td>400</td>
+                                    <td>100</td>
+                                    <td style="color: #48bb78;">Active</td>
+                                </tr>
+                                <tr>
+                                    <td>Global Card</td>
+                                    <td>200</td>
+                                    <td>180</td>
+                                    <td>20</td>
+                                    <td style="color: #48bb78;">Active</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Mining Control -->
+                    <div id="admin-mining" class="admin-section" style="display: none;">
+                        <h2 style="margin-bottom: 20px;">Mining Control Center</h2>
+                        <div class="mining-interface">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                                <h2>Gift Card Mining Bot</h2>
+                                <div>
+                                    <button class="btn btn-success" onclick="startGiftCardMining()">Start Mining</button>
+                                    <button class="btn btn-danger" onclick="stopGiftCardMining()">Stop Mining</button>
+                                </div>
+                            </div>
+
+                            <div class="mining-stats">
+                                <div class="mining-stat">
+                                    <h4>Mining Status</h4>
+                                    <div class="value" id="admin-mining-status">Stopped</div>
+                                </div>
+                                <div class="mining-stat">
+                                    <h4>Cards Mined Today</h4>
+                                    <div class="value">0</div>
+                                </div>
+                                <div class="mining-stat">
+                                    <h4>Total Value Mined</h4>
+                                    <div class="value">$0.00</div>
+                                </div>
+                                <div class="mining-stat">
+                                    <h4>Admin Wallet Balance</h4>
+                                    <div class="value">$12,500.00</div>
+                                </div>
+                            </div>
+
+                            <h3 style="margin: 30px 0 15px;">Mined Cards Distribution</h3>
+                            <div class="dashboard-grid">
+                                <div class="stat-card amazon" style="height: auto; padding: 15px;">
+                                    <h4>Amazon</h4>
+                                    <p>0 cards mined</p>
+                                </div>
+                                <div class="stat-card itunes" style="height: auto; padding: 15px;">
+                                    <h4>iTunes</h4>
+                                    <p>0 cards mined</p>
+                                </div>
+                                <div class="stat-card google" style="height: auto; padding: 15px;">
+                                    <h4>Google Play</h4>
+                                    <p>0 cards mined</p>
+                                </div>
+                                <div class="stat-card apple" style="height: auto; padding: 15px;">
+                                    <h4>Apple</h4>
+                                    <p>0 cards mined</p>
+                                </div>
+                                <div class="stat-card global" style="height: auto; padding: 15px;">
+                                    <h4>Global Card</h4>
+                                    <p>0 cards mined</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Messages -->
+                    <div id="admin-messages" class="admin-section" style="display: none;">
+                        <h2 style="margin-bottom: 20px;">Customer Messages</h2>
+                        <div id="admin-message-list">
+                            <div class="message-item">
+                                <div class="header">
+                                    <strong>From: John Doe (john@email.com)</strong>
+                                    <span style="color: #666;">2024-01-15 14:30</span>
+                                </div>
+                                <p><strong>Subject:</strong> Gift Card Verification Issue</p>
+                                <p>I'm having trouble verifying my Amazon gift card. The system shows it as invalid even though I just purchased it.</p>
+                                <div class="attachments">
+                                    <span class="attachment">card_screenshot.png</span>
+                                    <span class="attachment">receipt.jpg</span>
+                                </div>
+                                <div style="margin-top: 15px;">
+                                    <button class="btn btn-primary" style="padding: 8px 15px; font-size: 14px;">Reply</button>
+                                    <button class="btn btn-success" style="padding: 8px 15px; font-size: 14px;">Mark Resolved</button>
+                                </div>
+                            </div>
+                            <div class="message-item">
+                                <div class="header">
+                                    <strong>From: Jane Smith (jane@email.com)</strong>
+                                    <span style="color: #666;">2024-01-15 12:15</span>
+                                </div>
+                                <p><strong>Subject:</strong> Withdrawal Delay</p>
+                                <p>My withdrawal request from yesterday hasn't been processed yet. Transaction ID: TXN004567</p>
+                                <div style="margin-top: 15px;">
+                                    <button class="btn btn-primary" style="padding: 8px 15px; font-size: 14px;">Reply</button>
+                                    <button class="btn btn-success" style="padding: 8px 15px; font-size: 14px;">Mark Resolved</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Global Card -->
+                    <div id="admin-global-card" class="admin-section" style="display: none;">
+                        <h2 style="margin-bottom: 20px;">Global Card Management</h2>
+                        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; border-radius: 15px; margin-bottom: 30px;">
+                            <h3>Global Card - Owned by Olawale Abdul-ganiyu</h3>
+                            <p style="margin-top: 10px;">Real world bank money wallet address with barcode scanning capability</p>
+                        </div>
+
+                        <div class="tabs">
+                            <button class="tab active" onclick="showGlobalTab('send')">Send Money</button>
+                            <button class="tab" onclick="showGlobalTab('receive')">Receive Money</button>
+                            <button class="tab" onclick="showGlobalTab('transfer')">Transfer to Card</button>
+                            <button class="tab" onclick="showGlobalTab('scan')">Scan Card</button>
+                        </div>
+
+                        <div id="global-send-tab" class="tab-content active">
+                            <h3 style="margin-bottom: 20px;">Send Money via Global Card</h3>
+                            <form class="transaction-form">
+                                <div class="row">
+                                    <div class="form-group">
+                                        <label>Global Card Number (1-10 digits)</label>
+                                        <input type="text" maxlength="10" required placeholder="Enter card number">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Amount on Card ($)</label>
+                                        <input type="number" required placeholder="Enter amount">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group">
+                                        <label>Receiver Account Name</label>
+                                        <input type="text" required placeholder="Enter receiver name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Receiver Bank Name</label>
+                                        <select required>
+                                            <option value="">Select Bank</option>
+                                            <option value="access">Access Bank</option>
+                                            <option value="gtbank">GTBank</option>
+                                            <option value="zenith">Zenith Bank</option>
+                                            <option value="uba">UBA</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Receiver Account Number</label>
+                                        <input type="text" maxlength="10" required placeholder="Enter account number">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Country Dialing Code</label>
+                                    <select required>
+                                        <option value="">Select Country</option>
+                                        <option value="+234">Nigeria (+234)</option>
+                                        <option value="+1">United States (+1)</option>
+                                        <option value="+44">United Kingdom (+44)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Reason for Transfer</label>
+                                    <textarea rows="2" required placeholder="Enter reason"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-success">Send Money</button>
+                            </form>
+                        </div>
+
+                        <div id="global-receive-tab" class="tab-content">
+                            <h3 style="margin-bottom: 20px;">Receive Money via Global Card</h3>
+                            <form class="transaction-form">
+                                <div class="row">
+                                    <div class="form-group">
+                                        <label>Sender Name</label>
+                                        <input type="text" required placeholder="Enter sender name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Sender Bank/Card</label>
+                                        <input type="text" required placeholder="Enter sender bank or card">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group">
+                                        <label>Amount ($)</label>
+                                        <input type="number" required placeholder="Enter amount to receive">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Your Global Card Number</label>
+                                        <input type="text" maxlength="10" required placeholder="Enter your card number">
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Receive Money</button>
+                            </form>
+                        </div>
+
+                        <div id="global-transfer-tab" class="tab-content">
+                            <h3 style="margin-bottom: 20px;">Transfer Between Gift Cards/Wallets</h3>
+                            <form class="transaction-form">
+                                <div class="row">
+                                    <div class="form-group">
+                                        <label>From</label>
+                                        <select required>
+                                            <option value="">Select Source</option>
+                                            <option value="global-card">Global Card</option>
+                                            <option value="amazon">Amazon Gift Card</option>
+                                            <option value="itunes">iTunes Gift Card</option>
+                                            <option value="bitcoin">Bitcoin Wallet</option>
+                                            <option value="ethereum">Ethereum Wallet</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>To</label>
+                                        <select required>
+                                            <option value="">Select Destination</option>
+                                            <option value="amazon">Amazon Gift Card</option>
+                                            <option value="itunes">iTunes Gift Card</option>
+                                            <option value="bitcoin">Bitcoin Wallet</option>
+                                            <option value="ethereum">Ethereum Wallet</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Amount ($)</label>
+                                    <input type="number" required placeholder="Enter amount">
+                                </div>
+                                <button type="submit" class="btn btn-warning">Transfer</button>
+                            </form>
+                        </div>
+
+                        <div id="global-scan-tab" class="tab-content">
+                            <h3 style="margin-bottom: 20px;">Scan Global Card Barcode</h3>
+                            <div class="scanner-container">
+                                <div class="scanner-box">
+                                    <div class="scanner-line"></div>
+                                </div>
+                                <p>Position Global Card barcode within the frame</p>
+                                <button class="btn btn-primary" onclick="scanGlobalCard()">Scan Card</button>
+                                <div id="global-card-result" style="margin-top: 20px; display: none;">
+                                    <div style="background: white; color: #333; padding: 20px; border-radius: 10px;">
+                                        <h4 style="margin-bottom: 15px;">Card Details:</h4>
+                                        <p><strong>Card Number:</strong> <span id="gc-number">1234567890</span></p>
+                                        <p><strong>Card Owner:</strong> Olawale Abdul-ganiyu</p>
+                                        <p><strong>Available Balance:</strong> <span id="gc-balance">$5,000.00</span></p>
+                                        <p><strong>Status:</strong> <span style="color: #48bb78;">Active</span></p>
+                                        <p><strong>Wallet Address:</strong> <span style="font-family: monospace; font-size: 12px;">0x1234567890abcdef1234567890abcdef12345678</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Settings -->
+                    <div id="admin-settings" class="admin-section" style="display: none;">
+                        <h2 style="margin-bottom: 20px;">System Settings</h2>
+                        <div class="form-group">
+                            <label>Company Name</label>
+                            <input type="text" value="Global Bank Nigeria">
+                        </div>
+                        <div class="form-group">
+                            <label>Support Email</label>
+                            <input type="email" value="adeganglobal@gmail.com">
+                        </div>
+                        <div class="form-group">
+                            <label>Owner Name</label>
+                            <input type="text" value="Olawale Abdul-ganiyu">
+                        </div>
+                        <div class="form-group">
+                            <label>Business Registration (CAC)</label>
+                            <input type="text" value="RC-1234567">
+                        </div>
+                        <button class="btn btn-primary">Save Settings</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Modal Title</h2>
+                <button class="close-btn" onclick="closeModal()">&times;</button>
+            </div>
+            <div id="modal-body">
+                <!-- Modal content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
